@@ -8,4 +8,4 @@ spec:
     - name: revision
       value: master
     - name: url
-      value: ssh://git@git.jfrog.info/ptreng/tekton.git
+      value: git@github.com:peters95/tekton.git
