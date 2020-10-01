@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# LOAD
+echo "Loading environment..."
+

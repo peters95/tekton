@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# DELETE
+echo "Cleaning up the workspace"

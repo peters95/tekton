@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# UNLOAD
+echo "Unloading the environment..."

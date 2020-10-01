@@ -1,0 +1,26 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: tekton-pipeline
+spec:
+  resources:
+    - name: source-repo
+      type: git
+    - name: tekton-image
+      type: image
+  tasks:
+    - name: build-docker
+      taskRef:
+        name: build-docker-image-from-git-source
+      params:
+        - name: pathToDockerFile
+          value: /workspace/tekton-source/Dockerfile
+        - name: pathToContext
+          value: /workspace/tekton-source/
+      resources:
+        inputs:
+          - name: tekton-source
+            resource: source-repo
+        outputs:
+          - name: tektonBuiltImage
+            resource: tekton-image

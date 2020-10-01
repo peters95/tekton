@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+if [ -z "$1" ]
+then
+  echo ""
+  echo "Unrecognized input command. Displaying help below"
+  echo ""
+  echo "  build  -> runs the build script"
+  echo "  load   -> loads the environment in AWS Cloud formation"
+  echo "  test   -> runs the test framework against the environment"
+  echo "  unload -> unloads the environment"
+  echo "  delete -> cleans up the workspace"
+  echo ""
+else
+  echo ""
+  echo "Running command $1 ..."
+  exec $(pwd)/$1
+fi
+
