@@ -5,7 +5,7 @@
 Install Tekton Pipelines into a new Kubernetes cluster with the following command:
 
 ````bash
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.11.1/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/latest/release.yaml
 ````
 
 Monitor it has come up successfully with the below command:
