@@ -6,4 +6,4 @@ spec:
   type: image
   params:
     - name: url
-      value: partnership-fozzie-images.jfrog.io/tekton
+      value: tekton.jfrog.tech/docker-local/tekton
