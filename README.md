@@ -59,3 +59,18 @@ kubectl create secret docker-registry regcred \
 
 ### Step 2: Run Tekton Pipeline To Build and Push Image to Artifactory
 
+Deploy all resources:
+````bash
+kubectl apply -f docker-build
+````
+
+Check on your pipeline status:
+````bash
+tkn pipelinerun list
+````
+
+View the logs:
+````bash
+tkn pipelinerun logs $(tkn pipelinerun list | grep -v 'NAME' | cut -f1 -d ' ') -f -n default
+````
+
